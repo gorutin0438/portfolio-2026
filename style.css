@@ -1,0 +1,493 @@
+:root {
+    /* Color Palette Estimation */
+    --color-primary-blue: #94aebd;
+    /* The main slate blue */
+    --color-primary-blue-light: #b0cbe0;
+    /* Lighter blue for circles */
+    --color-primary-blue-dark: #7a95a6;
+    /* Darker blue */
+    --color-bg-light: #f9f9f9;
+    --color-accent-yellow: #eebd63;
+    /* The mustard/gold button color */
+    --color-text-main: #333333;
+    --color-text-sub: #666666;
+    --color-tag-blue: #8fb1cc;
+    --font-heading: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    --font-body: 'Noto Sans JP', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-main);
+    background-color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll from decorations */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    position: relative;
+    padding: 20px 0 60px;
+    text-align: center;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.header-top {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 40px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.nav a {
+    margin-left: 20px;
+    font-size: 0.8rem;
+    color: #fff;
+    /* Based on image, it looks like it's on a blue circle or just white? wait. 
+                   Actually in the image 'Design Web Site Company' is top right. 
+                   The background there is blue. Let's fix that.
+                   Ah, looking close at image: Top bar is subtle blue? Or buttons?
+                   Let's assume white text on blue bar OR dark text on white.
+                   Actually, looking at the top right, it seems to be just text on the white/blue background.
+                   Let's stick to dark text for now unless it sits on a circle. */
+    color: #888;
+    font-weight: 500;
+}
+
+.header-logo {
+    position: relative;
+    z-index: 2;
+    margin-top: 40px;
+}
+
+.logo-barcode {
+    font-family: monospace;
+    font-size: 2rem;
+    letter-spacing: -2px;
+    color: #555;
+    margin-bottom: 5px;
+    opacity: 0.6;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #333;
+}
+
+.logo-sub {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* Decorative Circles */
+.header-circles .circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.circle-1 {
+    width: 200px;
+    height: 200px;
+    background-color: var(--color-primary-blue-light);
+    top: -50px;
+    left: -50px;
+}
+
+.circle-2 {
+    width: 150px;
+    height: 150px;
+    background-color: #e0e0e0;
+    /* Light grey */
+    top: 50px;
+    left: 80px;
+    opacity: 0.4;
+}
+
+.circle-3 {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-primary-blue);
+    top: 10px;
+    left: 300px;
+}
+
+.circle-4 {
+    width: 250px;
+    height: 250px;
+    background-color: #dce6ef;
+    /* Very light blue */
+    top: -80px;
+    right: -50px;
+}
+
+/* Section Common */
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Design Section */
+.design-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .design-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.design-item {
+    background: #fff;
+    border: 1px solid #eee;
+    /* faint border */
+    padding-bottom: 10px;
+    transition: transform 0.2s;
+}
+
+.design-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.item-meta {
+    padding: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--color-tag-blue);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    margin-bottom: 5px;
+}
+
+.item-title {
+    font-size: 0.85rem;
+    color: #333;
+}
+
+/* Pick Up Divider */
+.pickup-divider {
+    background-color: var(--color-primary-blue);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0 40px;
+    /* extra padding bottom for the triangle */
+    position: relative;
+    margin-top: 40px;
+}
+
+.divider-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.check-mark {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    /* Drawing a check shape or v shape */
+}
+
+.pickup-divider h2 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.triangle-down {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    /* Adjust based on size */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 30px solid var(--color-primary-blue);
+    z-index: 10;
+}
+
+/* Pick Up Section */
+.pickup-section {
+    padding-top: 60px;
+    /* Space for triangle */
+}
+
+.pickup-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    padding: 40px;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+}
+
+.pickup-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.pickup-text {
+    flex: 1;
+    padding: 0 40px;
+}
+
+.pickup-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pickup-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.pickup-sub {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+.btn-more {
+    display: inline-block;
+    background-color: var(--color-accent-yellow);
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.btn-more:hover {
+    opacity: 0.8;
+}
+
+.circle-image-wrapper {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid #e60012;
+    /* Brand color match for Maruchan if needed */
+}
+
+.circle-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pickup-image img {
+    max-width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pickup-image img.grayscale {
+    filter: grayscale(100%);
+}
+
+/* Profile Section */
+.profile-section {
+    position: relative;
+    background-color: #fff;
+    margin-top: 0;
+}
+
+.profile-header-swoosh {
+    background-color: var(--color-primary-blue);
+    color: #fff;
+    padding: 60px 0 100px;
+    /* Deep padding */
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+    /* creating the V shape bottom */
+}
+
+.profile-header-swoosh h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: -50px;
+    /* Pull up into the swoosh area */
+    position: relative;
+    z-index: 5;
+    padding-bottom: 80px;
+}
+
+.profile-info {
+    flex: 1;
+    padding-top: 60px;
+    /* Offset the pull up so text is lower */
+}
+
+.profile-list {
+    font-size: 1rem;
+}
+
+.profile-row {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.profile-row dt {
+    width: 100px;
+    font-weight: bold;
+    color: var(--color-primary-blue);
+}
+
+.profile-row dd {
+    flex: 1;
+    font-weight: bold;
+    color: #333;
+}
+
+.profile-image {
+    flex: 1;
+    text-align: right;
+}
+
+.profile-image img {
+    max-width: 350px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+    /* soft fade at bottom if needed */
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-primary-blue);
+    color: #fff;
+    padding: 40px 0;
+    font-size: 0.8rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-barcode.small {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+}
+
+.link-group h4 {
+    margin-bottom: 10px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+.link-group li {
+    margin-bottom: 5px;
+}
+
+.link-group a {
+    opacity: 0.9;
+}
+
+.link-group a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .design-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pickup-item,
+    .pickup-item.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pickup-text {
+        padding: 0 0 30px 0;
+    }
+
+    .profile-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .profile-info {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
