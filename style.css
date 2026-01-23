@@ -359,7 +359,7 @@ ul {
 .profile-section {
     position: relative;
     background-color: #fff;
-    padding: 60px 0;
+    padding: 16px 0;
     /* Space for triangle */
 }
 
@@ -369,7 +369,6 @@ ul {
     align-items: flex-start;
     position: relative;
     z-index: 5;
-    padding-bottom: 20px;
 }
 
 .profile-info {
@@ -407,6 +406,7 @@ ul {
 }
 
 .profile-image img {
+    vertical-align: top;
     max-width: 350px;
     /* soft fade at bottom if needed */
 }
