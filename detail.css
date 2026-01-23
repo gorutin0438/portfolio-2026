@@ -1,0 +1,161 @@
+/* Detail Page Styles */
+
+.detail-page {
+    background-color: #e8e8e8;
+    min-height: 100vh;
+}
+
+.detail-main {
+    padding: 100px 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.detail-container {
+    background-color: #fff;
+    max-width: 900px;
+    width: 100%;
+    padding: 40px 50px 60px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.breadcrumb-home {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.breadcrumb-home:hover {
+    color: var(--color-primary-blue);
+}
+
+.breadcrumb-separator {
+    color: #999;
+}
+
+.breadcrumb-item {
+    color: #666;
+}
+
+/* Detail Header */
+.detail-header {
+    margin-bottom: 40px;
+}
+
+.detail-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.detail-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.detail-tag {
+    display: inline-block;
+    background-color: var(--color-tag-blue);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.detail-tools {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Detail Image */
+.detail-image-wrapper {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.detail-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Detail Description */
+.detail-description {
+    margin-top: 40px;
+}
+
+.detail-description p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.detail-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .detail-main {
+        padding: 80px 15px 40px;
+    }
+
+    .detail-container {
+        padding: 30px 25px 40px;
+    }
+
+    .detail-title {
+        font-size: 1.8rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.75rem;
+    }
+
+    .detail-tools {
+        font-size: 0.85rem;
+    }
+
+    .detail-description p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-container {
+        padding: 25px 20px 35px;
+    }
+
+    .detail-title {
+        font-size: 1.5rem;
+    }
+
+    .detail-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

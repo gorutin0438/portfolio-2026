@@ -281,6 +281,12 @@ ul {
     }
 }
 
+.design-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .design-item {
     background: #fff;
     border: 1px solid #eee;
@@ -289,7 +295,7 @@ ul {
     transition: transform 0.2s;
 }
 
-.design-item:hover {
+.design-item-link:hover .design-item {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
