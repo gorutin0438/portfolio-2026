@@ -149,11 +149,6 @@ ul {
     right: -50px;
 }
 
-/* Section Common */
-.section {
-    padding: 60px 0;
-}
-
 .section-title {
     text-align: center;
     font-size: 1.2rem;
@@ -166,6 +161,10 @@ ul {
 }
 
 /* Design Section */
+.design-section {
+    padding: 60px 0;
+}
+
 .design-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -264,7 +263,7 @@ ul {
 
 /* Pick Up Section */
 .pickup-section {
-    padding-top: 60px;
+    padding: 60px 0;
     /* Space for triangle */
 }
 
@@ -360,7 +359,7 @@ ul {
 .profile-section {
     position: relative;
     background-color: #fff;
-    padding-top: 60px;
+    padding: 60px 0;
     /* Space for triangle */
 }
 
@@ -370,7 +369,7 @@ ul {
     align-items: flex-start;
     position: relative;
     z-index: 5;
-    padding-bottom: 80px;
+    padding-bottom: 20px;
 }
 
 .profile-info {
