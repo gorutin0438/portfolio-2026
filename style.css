@@ -345,34 +345,29 @@ ul {
     filter: grayscale(100%);
 }
 
+/* Profile Divider */
+.profile-divider {
+    background-color: var(--color-primary-blue);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0 40px;
+    /* extra padding bottom for the triangle */
+    position: relative;
+    margin-top: 40px;
+}
+
 /* Profile Section */
 .profile-section {
     position: relative;
     background-color: #fff;
-    margin-top: 0;
-}
-
-.profile-header-swoosh {
-    background-color: var(--color-primary-blue);
-    color: #fff;
-    padding: 60px 0 100px;
-    /* Deep padding */
-    text-align: center;
-    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
-    /* creating the V shape bottom */
-}
-
-.profile-header-swoosh h2 {
-    font-size: 2rem;
-    font-weight: 500;
+    padding-top: 60px;
+    /* Space for triangle */
 }
 
 .profile-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: -50px;
-    /* Pull up into the swoosh area */
     position: relative;
     z-index: 5;
     padding-bottom: 80px;
