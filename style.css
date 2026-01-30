@@ -99,6 +99,12 @@ ul {
     gap: 30px;
 }
 
+@media (max-width: 480px) {
+    .header-nav {
+        display: none;
+    }
+}
+
 .header-nav a {
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.9);
@@ -277,7 +283,7 @@ ul {
     transition: left 0.3s ease-in-out;
 }
 
-.sidemenu open {
+.sidemenu.open {
     left: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -292,7 +298,7 @@ ul {
     display: block;
 }
 
-/\/\*\*/ INSERT_YOUR_CODE */ .sidemenu-item a {
+.sidemenu-item a {
     transition: background 0.2s, color 0.2s;
 }
 
@@ -301,7 +307,17 @@ ul {
     color: var(--color-primary-blue);
 }
 
+.sidemenu-toggle {
+    background-color: transparent;
+    border: none;
+    display: none;
+}
 
+@media (max-width: 480px) {
+    .sidemenu-toggle {
+        display: block;
+    }
+}
 
 /* Design Section */
 .design-section {
