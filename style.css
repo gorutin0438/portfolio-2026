@@ -264,6 +264,45 @@ ul {
     gap: 10px;
 }
 
+.sidemenu {
+    padding: 8px 16px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidemenu open {
+    left: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidemenu-item {
+    border-bottom: 1px solid #eee;
+}
+
+.sidemenu-item a {
+    padding: 16px;
+    color: #333;
+    display: block;
+}
+
+/\/\*\*/ INSERT_YOUR_CODE */ .sidemenu-item a {
+    transition: background 0.2s, color 0.2s;
+}
+
+.sidemenu-item a:hover {
+    background-color: var(--color-primary-blue-light);
+    color: var(--color-primary-blue);
+}
+
+
+
 /* Design Section */
 .design-section {
     padding: 60px 0;
