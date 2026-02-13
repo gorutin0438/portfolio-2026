@@ -3,6 +3,11 @@
 .detail-page {
     background-color: #fff;
     min-height: 100vh;
+    transition: opacity 0.35s ease-out;
+}
+
+.detail-page.page-transition-exit {
+    opacity: 0;
 }
 
 .detail-main {
